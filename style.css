@@ -1,0 +1,23 @@
+/*Description
+1, Root settings
+2, Body and html settings
+3, Buttons
+4, Navbar
+5, Hero section
+*/
+
+
+
+/* 1, Root settings */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    --one: D0EFB1;
+    --two: B3D89C;
+    --three: 9DC3C2;
+    --four: 77A6B6;
+    --five: 4D7298;
+    --black: black;
+    --white: white;  
+}
+
