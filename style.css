@@ -1,23 +1,211 @@
 /*Description
 1, Root settings
 2, Body and html settings
-3, Buttons
-4, Navbar
-5, Hero section
+3, Navbar
+4, Hero section
+5, Grid area
 */
 
-
-
-/* 1, Root settings */
+/* 1, Root settings*/
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
-    --one: D0EFB1;
-    --two: B3D89C;
-    --three: 9DC3C2;
-    --four: 77A6B6;
-    --five: 4D7298;
-    --black: black;
-    --white: white;  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  --one: #dde392;
+  --two: #afbe8f;
+  --three: #7d8570;
+  --four: #646f58;
+  --five: #504b3a;
+  --black: black;
+  --white: white;
 }
 
+/* 2, Body and html settings*/
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--three);
+}
+
+/* Title settings (brand logo)*/
+
+.brand-logo {
+  max-width: 100%;
+  height: auto;
+  margin-top: 8vh;
+}
+
+/* 3, Navbar*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  align-items: center;
+  margin: 0 auto;
+  background-color: black;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-links ul {
+  display: flex;
+  padding: 0;
+  margin-top: 1vh;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 0.5rem;
+  margin: 2vw;
+}
+
+.navbar-links li:hover {
+  text-decoration: underline;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 10%;
+}
+/*Validated 2022-09-13 20:06*/
+
+/*Making navbar responsive*/
+@media screen and (max-width: 400px) {
+  .navbar {
+    flex-direction: coulmn;
+    align-items: flex-start;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+    height: 20vh;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+  .navbar-links ul li a {
+    padding: 0.05rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+    background-color: white;
+  }
+  .brand-logo {
+    margin-top: 10vw;
+  }
+}
+
+/* 4, Hero section*/
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/img/porsche1.jpg);
+  height: 120vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-image {
+    height: 140vh;
+  }
+}
+
+/* 5, Grid area*/
+
+.grid-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    background-color: var(--one);
+    padding: 10px;
+}
+
+.text1{
+   background-color: var(--five);
+   grid-column: 2;
+   text-align: center;
+   border-radius: 8px;
+   align-items: center;
+   padding-top: 20px;
+   color: white;
+   
+}
+
+.trygg{
+    grid-column: 1;
+    grid-row: 1;
+    
+}
+
+/* Making grid item responsive*/
+
+@media only screen and (max-width:550px){
+    .grid-item {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 5vh;
+        grid-template-areas:
+        "text1"
+        "trygg";
+    }
+
+    .text1{
+        height: 50vh;
+    }
+
+    .trygg{
+        height: auto;
+    }
+}
