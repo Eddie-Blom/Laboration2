@@ -42,16 +42,17 @@ html {
   background: black;
 }
 
-.img {
+img {
   margin: 0 0 0 0.45em;
+  width: 30%;
 }
-.img,
+img,
 .navigation {
   list-style: none;
   text-transform: uppercase;
 }
 
-.img,
+img,
 .navigation a {
   text-decoration: none;
   letter-spacing: 0.45rem;
@@ -77,8 +78,9 @@ html {
     flex-direction: column;
   }
 
-  .img {
+  img {
     margin: 0;
+    width: 40%;
   }
 
   .navigation {
@@ -88,6 +90,10 @@ html {
 }
 
 @media all and (max-width: 600px) {
+  img {
+    width: 60%;
+  }
+
   .navigation {
     flex-direction: column;
   }
@@ -255,19 +261,54 @@ input[type="submit"]:hover {
 /* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
-  background-color: var(--three);
+  background-color: var(--four);
   padding: 20px;
+}
+
+/*Ending section*/
+
+.ending-picture {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/porsche2.jpg);
+  height: 130vh;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 10vh;
+}
+
+#welcome {
+  text-align: center;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+/*Adjusting image height to fit all screens on all devices, top to down*/
+@media only screen and (max-width: 550px) {
+  .ending-picture {
+    height: 55vh;
+  }
+  #welcome {
+    top: 10%;
+    font-size: 2rem;
+  }
 }
 
 /* 7, Footer*/
 
 .Grid__Container {
   display: grid;
-  margin-top: 40vh;
+  margin-top: 0;
   /* 2 columns for smaller screens */
   grid-template-columns: repeat(2, 1fr);
   height: 40vh;
-  background-color: var(--four);
+  background-color: var(--five);
 }
 
 #item1 {
@@ -319,4 +360,4 @@ input[type="submit"]:hover {
     grid-column: span 4;
   }
 }
-  
+/*Validated 20220914 22:55*/
