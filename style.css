@@ -3,18 +3,18 @@
 2, Body and html settings
 3, Navbar
 4, Hero section
-5, Grid area
+5, Testimonial section / Grid area
 */
 
 /* 1, Root settings*/
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
-  --one: #dde392;
-  --two: #afbe8f;
-  --three: #7d8570;
-  --four: #646f58;
-  --five: #504b3a;
+  --one: #d0efb1;
+  --two: #b3d89c;
+  --three: #9dc3c2;
+  --four: #77a6b6;
+  --five: #4d7298;
   --black: black;
   --white: white;
 }
@@ -28,113 +28,87 @@ html {
   overflow-x: hidden;
   height: 100%;
   box-sizing: border-box;
-  background-color: var(--three);
+  background-color: var(--five);
 }
 
-/* Title settings (brand logo)*/
+/* 3, Title and navbar settings (brand logo)*/
 
-.brand-logo {
-  max-width: 100%;
-  height: auto;
-  margin-top: 8vh;
-}
-
-/* 3, Navbar*/
-
-.navbar {
+.flex-container {
   display: flex;
   justify-content: space-between;
-  height: 8vh;
-  width: 100%;
-  position: fixed;
   align-items: center;
-  margin: 0 auto;
-  background-color: black;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  transition: 0.3s ease-in-out;
+  background: black;
 }
 
-.navbar-links ul {
-  display: flex;
-  padding: 0;
-  margin-top: 1vh;
+.img {
+  margin: 0 0 0 0.45em;
 }
-
-.navbar-links li {
+.img,
+.navigation {
   list-style: none;
+  text-transform: uppercase;
 }
 
-.navbar-links li a {
+.img,
+.navigation a {
   text-decoration: none;
-  color: var(--white);
-  padding: 0.5rem;
-  margin: 2vw;
+  letter-spacing: 0.45rem;
 }
 
-.navbar-links li:hover {
+.navigation {
+  display: flex;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
   text-decoration: underline;
 }
 
-.toggle-button {
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: var(--white);
-  border-radius: 10%;
-}
-/*Validated 2022-09-13 20:06*/
-
-/*Making navbar responsive*/
-@media screen and (max-width: 400px) {
-  .navbar {
-    flex-direction: coulmn;
-    align-items: flex-start;
-  }
-  .toggle-button {
-    display: flex;
-  }
-  .navbar-links {
-    display: none;
-    width: 100%;
-    height: 20vh;
-  }
-  .navbar-links ul {
-    width: 100%;
+/*media queries to make it responsive*/
+@media all and (max-width: 990px) {
+  .flex-container {
     flex-direction: column;
   }
-  .navbar-links ul li {
-    text-align: center;
+
+  .img {
+    margin: 0;
   }
-  .navbar-links ul li a {
-    padding: 0.05rem 1rem;
-  }
-  .navbar-links.active {
-    display: flex;
-    background-color: white;
-  }
-  .brand-logo {
-    margin-top: 10vw;
+
+  .navigation {
+    width: 100%;
+    justify-content: space-around;
   }
 }
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+/*Validated 20220914 10:27*/
 
 /* 4, Hero section*/
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/img/porsche1.jpg);
-  height: 120vh;
+    url(img/porsche1.jpg);
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -144,68 +118,93 @@ html {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--white);
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
 }
 
+/*Adjusting image height to fit all screens on all devices, top to down*/
 @media only screen and (max-width: 550px) {
   .hero-image {
     height: 140vh;
   }
 }
 
-/* 5, Grid area*/
+/* 6, Testimonial section / Grid area */
 
-.grid-item{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 10px;
-    background-color: var(--one);
-    padding: 10px;
+.testimonials-grid-container {
+  display: grid;
+  /*First we declare the columns*/
+  grid-template-columns: 1fr 1fr;
+  /*Next we declare the rows*/
+  grid-template-rows: 1fr;
+  gap: 20px;
+  row-gap: 5vh;
+  margin-top: 5vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  height: auto;
+
+  /*Where do i want each block to be?, how many rows will be used?*/
+  grid-template-areas: "comment1 comment2";
 }
 
-.text1{
-   background-color: var(--five);
-   grid-column: 2;
-   text-align: center;
-   border-radius: 8px;
-   align-items: center;
-   padding-top: 20px;
-   color: white;
-   
+#comment1 {
+  /*Give the area*/
+  grid-area: comment1;
+  border-radius: 8px;
+  background-image: url(img/trygghet.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
 }
 
-.trygg{
-    grid-column: 1;
-    grid-row: 1;
-    
+#comment2 {
+  background-color: var(--three);
+  /*Give the area*/
+  grid-area: comment2;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: white;
 }
 
-/* Making grid item responsive*/
+#comment2 h2 {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4vh;
+}
 
-@media only screen and (max-width:550px){
-    .grid-item {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        row-gap: 5vh;
-        grid-template-areas:
-        "text1"
-        "trygg";
-    }
+#comment2 p,
+h2 {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4vh;
+}
 
-    .text1{
-        height: 50vh;
-    }
+/*Section Testimonials Grid Responsive settings*/
+@media only screen and (max-width: 550px) {
+  .testimonials-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    row-gap: 5vh;
+    grid-template-areas:
+      "comment1"
+      "comment2";
+  }
+}
 
-    .trygg{
-        height: auto;
-    }
+@media only screen and (max-width: 550px) {
+  #comment2 p {
+    width: 100%;
+    padding: 20px;
+  }
 }
