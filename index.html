@@ -37,13 +37,58 @@
         <h2>Vi håller vårt löfte</h2>
         <p>
           Hos oss skall det kännas tryggt och köpa en bil.<br />
-          Med vår mångåriga erfarenhet inom branschen leverar<br />
-          vi alltid kvalité. Tala med vår personal kring garantier<br />
-          för just din bil.
+          Med vår mångåriga erfarenhet inom branschen leverar vi alltid kvalité.
+          Tala med vår<br />personal kring garantier för just din bil.
         </p>
       </div>
-      
     </section>
 
+    <!--Section Form-->
+    <section class="title">
+      <h1>Har ni några frågor?</h1>
+    </section>
+    <section id="form" class="form">
+      <div class="container">
+        <form action="action_page.php" method="post">
+          <label for="fname">Förnamn</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Ditt förnamn..."
+          />
+
+          <label for="lname">Efternamn</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Ditt efternamn.."
+          />
+
+          <label for="subject">Skriv till oss!</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Skriv dina frågor här.."
+            style="height: 200px;"
+          ></textarea>
+
+          <input type="submit" value="Skicka" />
+        </form>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+      <div class="Grid__Container">
+        <div id="item1">Lägg in valfritt</div>
+        <div id="item2">Lägg in valfritt</div>
+        <div id="item3">Lägg in valfritt</div>
+        <div id="item4">Lägg in valfritt</div>
+
+        <div class="Bottom_Column"><p>FOLKBIL.COM</p></div>
+      </div>
+    </footer>
   </body>
 </html>

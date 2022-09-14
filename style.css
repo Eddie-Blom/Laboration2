@@ -4,6 +4,8 @@
 3, Navbar
 4, Hero section
 5, Testimonial section / Grid area
+6, Section Form
+7, Footer
 */
 
 /* 1, Root settings*/
@@ -149,6 +151,7 @@ html {
   margin-top: 5vh;
   margin-right: 10vw;
   margin-left: 10vw;
+  margin-bottom: 5vh;
   height: auto;
 
   /*Where do i want each block to be?, how many rows will be used?*/
@@ -167,7 +170,7 @@ html {
 }
 
 #comment2 {
-  background-color: var(--three);
+  background-color: var(--four);
   /*Give the area*/
   grid-area: comment2;
   border-radius: 8px;
@@ -208,3 +211,112 @@ h2 {
     padding: 20px;
   }
 }
+
+/* 6, Section Form */
+
+.title {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: var(--three);
+  padding: 20px;
+}
+
+/* 7, Footer*/
+
+.Grid__Container {
+  display: grid;
+  margin-top: 40vh;
+  /* 2 columns for smaller screens */
+  grid-template-columns: repeat(2, 1fr);
+  height: 40vh;
+  background-color: var(--four);
+}
+
+#item1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5vh;
+}
+#item2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5vh;
+}
+#item3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5vh;
+}
+#item4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5vh;
+}
+
+.Bottom_Column {
+  /* The bottom "row" should span the 2 columns on smaller screens */
+  grid-column: span 2 / span 2;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+
+@media (min-width: 768px) {
+  .Grid__Container {
+    /* 4 columns for larger screens */
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Bottom_Column {
+    /* The bottom "row" should span the 4 columns on larger screens */
+    grid-column: span 4;
+  }
+}
+  
