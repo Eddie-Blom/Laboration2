@@ -8,15 +8,20 @@
     <title>FOLKBIL</title>
   </head>
   <body>
-    <main> 
-
+    <main>
       <!--Title and navbar settings (brand logo)-->
       <nav>
         <div class="flex-container">
           <img src="img/Folkbil.png" alt="Folkbil" />
           <ul class="navigation">
             <li><a href="#item1">Kontakt</a></li>
-            <li><a href="https://www.blocket.se/butik/fordonshuset" target="_blank">Lager</a></li>
+            <li>
+              <a
+                href="https://www.blocket.se/butik/fordonshuset"
+                target="_blank"
+                >Lager</a
+              >
+            </li>
             <li><a href="#">Finans</a></li>
             <li><a href="#">Garanti</a></li>
           </ul>
@@ -53,7 +58,8 @@
       <section class="title">
         <h1>Har ni några frågor?</h1>
       </section>
-      <section id="form" class="form"> <!--***Fråga***-->
+      <section id="form" class="form">
+        <!--***Fråga***-->
         <div class="container">
           <form action="action_page.php" method="post">
             <label for="fname">Förnamn</label>
@@ -85,17 +91,48 @@
         </div>
       </section>
     </main>
-    
+
     <!--Ending section-->
     <section class="ending-picture">
       <h1 id="welcome">VÄLKOMMEN</h1>
     </section>
 
     <!--Footer-->
-    <footer class="foot">
-      <p id="item1">Kontaktinformation</p>
-      <p id="tel">Tel: 0760-082023</p>
-      <p id="mail-eddie"><a href="mailto:email.sutcu@gmail.com">@mail</a></p>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>Folk<span>bil Stockholm AB</span></h3>
+
+        <p class="footer-links">
+          <a href="folkbil.com">folkbil.com</a>
+        </p>
+
+        <p class="footer-company-name">Folkbil Stockholm AB &copy; 2022</p>
+        <p class="footer-company-name">Powered by Eddie Sütcü</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Turbinvägen 7E, 131 60 Nacka</span>Sweden</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+46(0)760-082023</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="email.sutcu@gmail.com">Maila oss</a></p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>I samarbete med:</span>
+          Fordonshuset Sweden AB
+        </p>
+      </div>
     </footer>
   </body>
 </html>
