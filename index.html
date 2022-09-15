@@ -8,80 +8,84 @@
     <title>FOLKBIL</title>
   </head>
   <body>
-    <!--Title and navbar settings (brand logo)-->
-    <nav>
-      <div class="flex-container">
-        <img src="/img/Folkbil.png" alt="Folkbil" />
-        <ul class="navigation">
-          <li><a href="#item1">Kontakt</a></li>
-          <li><a href="#">Lager</a></li>
-          <li><a href="#">Finans</a></li>
-          <li><a href="#">Garanti</a></li>
-        </ul>
-      </div>
-    </nav>
+    <main> 
 
-    <!--Hero section-->
-    <section class="hero-image">
-      <div class="hero-text">
-        <h1>EN BIL FÖR FOLKET!</h1>
-        <h2 id="usp-text">
-          Trygghet först
-        </h2>
-      </div>
-    </section>
+      <!--Title and navbar settings (brand logo)-->
+      <nav>
+        <div class="flex-container">
+          <img src="img/Folkbil.png" alt="Folkbil" />
+          <ul class="navigation">
+            <li><a href="#item1">Kontakt</a></li>
+            <li><a href="https://www.blocket.se/butik/fordonshuset" target="_blank">Lager</a></li>
+            <li><a href="#">Finans</a></li>
+            <li><a href="#">Garanti</a></li>
+          </ul>
+        </div>
+      </nav>
 
-    <!--Validated 20220914 10:43-->
+      <!--Hero section-->
+      <section class="hero-image">
+        <div class="hero-text">
+          <h1>EN BIL FÖR FOLKET!</h1>
+          <h2 id="usp-text">
+            Trygghet först
+          </h2>
+        </div>
+      </section>
 
-    <!--Testimonial section / Grid area-->
-    <section class="testimonials-grid-container">
-      <div id="comment1"></div>
-      <div id="comment2">
-        <h2>Vi håller vårt löfte</h2>
-        <p>
-          Hos oss skall det kännas tryggt och köpa en bil.<br />
-          Med vår mångåriga erfarenhet inom branschen leverar vi alltid kvalité.
-          Tala med vår<br />personal kring garantier för just din bil.
-        </p>
-      </div>
-    </section>
+      <!--Validated 20220914 10:43-->
 
-    <!--Section Form-->
-    <section class="title">
-      <h1>Har ni några frågor?</h1>
-    </section>
-    <section id="form" class="form">
-      <div class="container">
-        <form action="action_page.php" method="post">
-          <label for="fname">Förnamn</label>
-          <input
-            type="text"
-            id="fname"
-            name="firstname"
-            placeholder="Ditt förnamn..."
-          />
+      <!--Testimonial section / Grid area-->
+      <section class="testimonials-grid-container">
+        <div id="comment1"></div>
+        <div id="comment2">
+          <h2>Vi håller vårt löfte</h2>
+          <p>
+            Hos oss skall det kännas tryggt och köpa en bil.<br />
+            Med vår mångåriga erfarenhet inom branschen leverar vi alltid
+            kvalité. Tala med vår<br />personal kring garantier för just din
+            bil.
+          </p>
+        </div>
+      </section>
 
-          <label for="lname">Efternamn</label>
-          <input
-            type="text"
-            id="lname"
-            name="lastname"
-            placeholder="Ditt efternamn.."
-          />
+      <!--Section Form-->
+      <section class="title">
+        <h1>Har ni några frågor?</h1>
+      </section>
+      <section id="form" class="form"> <!--***Fråga***-->
+        <div class="container">
+          <form action="action_page.php" method="post">
+            <label for="fname">Förnamn</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Ditt förnamn..."
+            />
 
-          <label for="subject">Skriv till oss!</label>
-          <textarea
-            id="subject"
-            name="subject"
-            placeholder="Skriv dina frågor här.."
-            style="height: 200px;"
-          ></textarea>
+            <label for="lname">Efternamn</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Ditt efternamn.."
+            />
 
-          <input type="submit" value="Skicka" />
-        </form>
-      </div>
-    </section>
+            <label for="subject">Skriv till oss!</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Skriv dina frågor här.."
+              style="height: 200px;"
+            ></textarea>
 
+            <input type="submit" value="Skicka" />
+          </form>
+        </div>
+      </section>
+    </main>
+    
     <!--Ending section-->
     <section class="ending-picture">
       <h1 id="welcome">VÄLKOMMEN</h1>
@@ -89,14 +93,9 @@
 
     <!--Footer-->
     <footer>
-      <div class="Grid__Container">
-        <div id="item1">Kontakt:</div>
-        <div id="item2">+46(0)760-082323</div>
-        <div id="item3">email.sutcu@gmail.com</div>
-        <div id="item4">Turbinvägen 7E</div>
-
-        <div class="Bottom_Column"><p>FOLKBIL.COM</p></div>
-      </div>
+      <h2 id="item1">Kontaktinformation</h2>
+      <p>Tel: 0760-082023<br>
+      <a href="mailto:email.sutcu@gmail.com">email.sutcu@gmail.com</a></p>
     </footer>
   </body>
 </html>

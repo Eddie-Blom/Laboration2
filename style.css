@@ -101,8 +101,6 @@ img,
   .navigation a {
     text-align: center;
     padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .navigation li:last-of-type a {
@@ -221,13 +219,16 @@ h2 {
 /* 6, Section Form */
 
 .title {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  color: white;
 }
 
 .form {
   display: flex;
   justify-content: center;
-  margin-top: 20vh;
 }
 
 input[type="text"],
@@ -302,62 +303,14 @@ input[type="submit"]:hover {
 
 /* 7, Footer*/
 
-.Grid__Container {
-  display: grid;
-  margin-top: 0;
-  /* 2 columns for smaller screens */
-  grid-template-columns: repeat(2, 1fr);
-  height: 40vh;
-  background-color: var(--five);
-}
-
-#item1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  margin-top: 5vh;
-}
-#item2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  margin-top: 5vh;
-}
-#item3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  margin-top: 5vh;
-}
-#item4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  margin-top: 5vh;
-}
-
-.Bottom_Column {
-  /* The bottom "row" should span the 2 columns on smaller screens */
-  grid-column: span 2 / span 2;
+footer {
+  text-align: center;
+  padding: 3px;
   background-color: black;
   color: white;
-  display: flex;
-  justify-content: center;
-  margin-top: 20vh;
 }
 
-@media (min-width: 768px) {
-  .Grid__Container {
-    /* 4 columns for larger screens */
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .Bottom_Column {
-    /* The bottom "row" should span the 4 columns on larger screens */
-    grid-column: span 4;
-  }
+footer a {
+  color: white;
+  text-decoration: none;
 }
-/*Validated 20220914 22:55*/
