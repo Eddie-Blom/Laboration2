@@ -303,14 +303,29 @@ input[type="submit"]:hover {
 
 /* 7, Footer*/
 
-footer {
+.foot {
+  display: block;
   text-align: center;
-  padding: 3px;
+  padding: 1px;
   background-color: black;
   color: white;
 }
 
-footer a {
+#item1 {
   color: white;
+  font-weight: 600;
+  font-size: larger;
+  text-decoration: underline;
+}
+
+#mail.eddie, a {
+  color: white;
+  font-weight: 800;
   text-decoration: none;
+  font-size: large;
+}
+
+#tel {
+  color: white;
+  font-weight: 600;
 }
