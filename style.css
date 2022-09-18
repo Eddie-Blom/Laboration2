@@ -89,7 +89,7 @@ img,
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 700px) {
   img {
     width: 60%;
   }
@@ -179,6 +179,7 @@ img,
   grid-area: comment2;
   border-radius: 8px;
   text-align: center;
+  font-size: 24px;
   align-items: center;
   padding-top: 20px;
   color: white;
@@ -308,7 +309,6 @@ input[type="submit"]:hover {
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-
   padding: 50px 20px;
   margin-top: 0px;
 }
@@ -442,3 +442,5 @@ input[type="submit"]:hover {
     margin-left: 0;
   }
 }
+
+/*Validated 20220918 17:09*/
