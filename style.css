@@ -30,7 +30,7 @@ html {
   overflow-x: hidden;
   height: 100%;
   box-sizing: border-box;
-  background-color: black;
+  background-color: var(--five);
 }
 
 /* 3, Title and navbar settings (brand logo)*/
